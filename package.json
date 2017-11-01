@@ -15,23 +15,31 @@
     "tutorial",
     "demo"
   ],
-  "author": "Bret Stateham",
+  "author": {
+    "name":"Bret Stateham",
+    "email": "Bret.Stateham@microsoft.com",
+    "url": "http://BretStateham.com"
+  },
+  
   "license": "MIT",
   "devDependencies": {
     "electron": "~1.7.8",
     "electron-builder": "^19.43.0"
   },
-  "build":{
+  "build": {
     "appId": "com.bretstateham.ell",
-    "win":{
+    "win": {
       "target": "nsis",
       "icon": "assets/ELL_Logo.png.ico"
     },
-    "deb":{
-      "icon": "assets/ELL_Logo.png"
+    "linux": {
+      "target": "deb",
+      "icon": "assets/linux/",
+      "category": "Development"
     },
-    "mac":{
-      "icon": "assets/ELL_Logo.png.icns"
+    "mac": {
+      "icon": "assets/ELL_Logo.png.icns",
+      "category": "public.app-category.developer-tools"
     }
   }
 }
