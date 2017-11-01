@@ -4,4 +4,3 @@
 
 var msg = 'Running inside mainWindow and renderer.js';
 console.log(msg);
-
