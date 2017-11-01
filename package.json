@@ -1,22 +1,44 @@
 {
-  "name": "electron-quick-start",
+  "name": "ELL",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Bret's Electron Lessons Learned Demo",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "dist": "build"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/BretStateham/elldemo",
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
+    "electron",
+    "lessons",
+    "learned",
     "demo"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": {
+    "name":"Bret Stateham",
+    "email": "Bret.Stateham@microsoft.com",
+    "url": "http://BretStateham.com"
+  },
+  
+  "license": "MIT",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "electron-builder": "^19.43.0"
+  },
+  "build": {
+    "appId": "com.bretstateham.ell",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/win/ELL_Logo.ico"
+    },
+    "linux": {
+      "target": "deb",
+      "icon": "assets/linux/",
+      "category": "Development"
+    },
+    "mac": {
+      "icon": "assets/mac/ELL_Logo.icns",
+      "category": "public.app-category.developer-tools"
+    }
   }
 }
